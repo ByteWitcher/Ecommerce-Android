@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_listing"
+    android:layout_margin="2dp">
+
+
+    <ImageView
+        android:id="@+id/product_list_image"
+        android:layout_width="175dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/content_description"
+        app:srcCompat="@drawable/error_loading_image" />
+
+    <TextView
+        android:id="@+id/product_list_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_label"
+        android:layout_toEndOf="@id/product_list_image"
+        android:layout_alignTop="@id/product_list_image"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/product_list_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Material.Light.RatingBar.Small"
+        android:layout_below="@id/product_list_label"
+        android:layout_marginStart="-2dp"
+        android:layout_alignStart="@id/product_list_label"
+        android:numStars="5"
+        android:progressTint="#FFD600"
+        android:rating="3" />
+
+    <TextView
+        android:id="@+id/product_list_evaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_ratings"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignTop="@id/product_list_ratingBar"
+        android:layout_alignBottom="@id/product_list_ratingBar"
+        android:layout_toEndOf="@id/product_list_ratingBar"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:id="@+id/product_list_description"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:text="@string/product_description"
+        android:maxLines="5"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_below="@id/product_list_ratingBar"
+        android:layout_alignStart="@id/product_list_label" />
+
+    <TextView
+        android:id="@+id/product_list_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_orders"
+        android:textColor="@color/black"
+        android:layout_above="@id/product_list_price"
+        android:layout_alignStart="@id/product_list_label"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/product_list_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:textStyle="bold"
+        android:textColor="@color/money_green"
+        android:layout_alignStart="@id/product_list_label"
+        android:layout_alignBottom="@id/product_list_image" />
+
+    <ImageButton
+        android:id="@+id/delete_product_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_alignBottom="@id/product_list_price"
+        android:background="@drawable/shape_button"
+        android:contentDescription="@string/remove_cart_item"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/ic_delete"
+        android:visibility="gone" />
+
+</RelativeLayout>
